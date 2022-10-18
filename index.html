@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo2.png" class="logo">
+            <ul>
+                <li><a href="#header">home</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#about">about me</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>hello! I'm <span>Sarah</span></h1>
+            <p>a <span>computer science</span> student <br>at the University of Waterloo</p>
+        </div>
+    </div>
+</div>
+
+<!-----------projects------------>
+<div id="projects">
+    <div class="container">
+        <h1 class="subtitle">my projects</h1>
+        <div class="projects-list">
+            <div class="project">
+                <img src="images/gradient2.jpg">
+                <div class="layer">
+                    <h2>Sarah's Personal Website</h2>
+                    <p>This right here! I was able to understand HTML and CSS hands-on, thanks to many Youtube videos and websites :) Special shoutout to Easy Tutorials on YouTube.</p>
+                    <a href='#'>Learn more</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/gradient2.jpg">
+                <div class="layer">
+                    <h2>Carebot</h2>
+                    <p>Discord bot made at Hack the North 2020++.</p>
+                    <a href="https://replit.com/@HTNTEAM123/Self-Care-Bot?v=1#README.md">Learn more</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/gradient2.jpg">
+                <div class="layer">
+                    <h2>Rudolph's Revenge</h2>
+                    <p>A Christmas-themed platformer game for KuriusGameJam. With no experienced designers on the team, I took on something new and was in charge of creating sprites for the game.</p>
+                    <a href="https://replit.com/@sarahgan/KuriusGameJam-Sprites#Final%20Sprites/rudolph-jumping.png">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-----------about------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/stargaze.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">about me</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('experience')">experience</p>
+                    <p class="tab-links" onclick="opentab('goals')">goals</p>
+                    <p class="tab-links" onclick="opentab('hobbies')">hobbies</p>
+                </div>
+                <div class="tab-contents active-tab" id="experience">
+                    <ul>
+                        <li><span>Cybersecurity @ Questrade</span><br>In the summer of 2022, I learned about Identity and Access Management as an IAM Administrator Intern at Questrade Financial Group. </li>
+                        <li><span>UWVR</span><br>Podcast Content Maker</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="goals">
+                    <ul>
+                        <li><span>VR Game</span><br>Create a VR-compatible puzzle game with the UWVR team.</li>
+                        <li><span>Reading App</span><br>I love reading, but I want to read faster!<br>I plan to create a mobile app that allows for speed reading through bolded letters.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="hobbies">
+                    <ul>
+                        <li><span>Crocheting/Knitting</span><br>I've made tote bags, cardigans, and long-sleeves! Most of all, I love gifting beanies to friends and family :)</li>
+                        <li><span>Playing Music</span><br>Since elementary school, I've been playing the French horn. Currently I'm part of my school's Concert Band Club. I love learning new instruments, from guitar, piano, trumpet, to the kalimba!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- -----------contact------------ -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">ping me</h1>
+                <p>e-mail: sarahgahyan@gmail.com</p>
+                <div class="socialmedia">
+                    <a href="https://www.linkedin.com/in/sarahg-an/"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/sarahgahyun"><img src="images/github.png" alt="GitHub"></a>
+                    <a href="https://devpost.com/sarahgahyun"><img src="images/devpost.png" alt="Devpost"></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <a href="images/Sarah_An_Resume_Sept22.pdf" download class="btn">Download CV</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
